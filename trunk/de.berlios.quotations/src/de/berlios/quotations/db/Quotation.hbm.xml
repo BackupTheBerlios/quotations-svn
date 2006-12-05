@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="de.berlios.quotations.db.Quotation"
+		table="QUOTATIONS">
+		<id name="id" column="ID">
+			<generator class="increment"/>
+		</id>
+		<property name="quotation" column="QUOTATION"  />
+
+		<property name="chapter" column="CHAPTER" />
+
+		<property name="page" column="PAGE" />
+
+		<property name="author" column="AUTHOR" />
+
+		<property name="title" column="TITLE" />
+
+		<property name="print" column="PRINT" />
+
+		<property name="year" column="YEAR" />
+
+		<property name="city" column="CITY" />
+
+		<property name="keyword" column="KEYWORD" />
+	</class>
+</hibernate-mapping>
