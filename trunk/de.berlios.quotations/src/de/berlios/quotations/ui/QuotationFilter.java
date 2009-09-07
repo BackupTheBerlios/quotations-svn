@@ -1,4 +1,4 @@
-package de.berlios.quotations;
+package de.berlios.quotations.ui;
 
 import java.util.HashMap;
 import java.util.Map;

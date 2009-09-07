@@ -1,4 +1,4 @@
-package de.berlios.quotations;
+package de.berlios.quotations.ui;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.swt.SWT;

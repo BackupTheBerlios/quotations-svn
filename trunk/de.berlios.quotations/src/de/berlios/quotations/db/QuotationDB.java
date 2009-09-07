@@ -5,7 +5,6 @@ import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -73,8 +72,8 @@ public class QuotationDB {
 		if (!transaction.isActive())
 			transaction.begin();
 
-		List result = session.createQuery("from Quotation").list();
-		Object[] objects = result.toArray();
+        Object[] objects = session.createQuery("from Quotation").list()
+                .toArray();
 		return objects;
 	}
 
