@@ -94,27 +94,27 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="de.berlios.quotations.handlers.Filter"
-            commandId="de.berlios.quotations.commandss.Filter">
+            commandId="de.berlios.quotations.handlers.Filter">
       </handler>
       <handler
             class="de.berlios.quotations.handlers.AddRecord"
-            commandId="de.berlios.quotations.commands.AddRecord">
+            commandId="de.berlios.quotations.handlers.AddRecord">
       </handler>
       <handler
             class="de.berlios.quotations.handlers.CopyRecord"
-            commandId="de.berlios.quotations.commands.CopyRecord">
+            commandId="de.berlios.quotations.handlers.CopyRecord">
       </handler>
       <handler
             class="de.berlios.quotations.handlers.EditRecord"
-            commandId="de.berlios.quotations.commands.EditRecord">
+            commandId="de.berlios.quotations.handlers.EditRecord">
       </handler>
       <handler
             class="de.berlios.quotations.handlers.DeleteRecord"
-            commandId="de.berlios.quotations.commands.DeleteRecord">
+            commandId="de.berlios.quotations.handlers.DeleteRecord">
       </handler>
       <handler
             class="de.berlios.quotations.handlers.ImportDB"
-            commandId="de.berlios.quotations.commands.ImportDB">
+            commandId="de.berlios.quotations.handlers.ImportDB">
       </handler>
    </extension>
    <extension
@@ -152,6 +152,18 @@
                style="push">
          </command>
       </menuContribution>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.berlios.quotations.application"
+            name="%Bundle-Name">
+         <property
+               name="appName"
+               value="%Bundle-Name">
+         </property>
+      </product>
    </extension>
 
 </plugin>
