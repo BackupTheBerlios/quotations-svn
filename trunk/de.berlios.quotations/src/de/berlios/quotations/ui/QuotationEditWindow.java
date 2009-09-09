@@ -143,7 +143,6 @@ public class QuotationEditWindow extends Dialog {
 	}
 
 	protected void okPressed() {
-        System.out.println("okPressed");
         if (quotation == null || copyRecord) {
 			quotation = new Quotation();
 		}
