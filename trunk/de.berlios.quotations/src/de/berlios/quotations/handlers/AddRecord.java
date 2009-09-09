@@ -20,7 +20,7 @@ public class AddRecord extends AbstractHandlerWithState {
     public Object execute(ExecutionEvent event) throws ExecutionException {
         QuotationEditWindow editWindow = new QuotationEditWindow(HandlerUtil
                 .getActiveShell(event), null, Activator.getDB(), Messages
-                .getString("AddRecordAction.WindowTitle")); //$NON-NLS-1$
+                .getString("AddRecordAction.WindowTitle"), false); //$NON-NLS-1$
         if (editWindow.open() == Window.OK) {
             Activator.refresh();
         }

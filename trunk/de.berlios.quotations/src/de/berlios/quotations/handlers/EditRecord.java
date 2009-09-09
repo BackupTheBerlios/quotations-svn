@@ -34,7 +34,7 @@ public class EditRecord extends AbstractHandlerWithState {
                         quotation,
                         Activator.getDB(),
                         Messages
-                                .getString("EditRecordAction.Edit_window_title")); //$NON-NLS-1$
+                                .getString("EditRecordAction.Edit_window_title"), false); //$NON-NLS-1$
                 if (editWindow.open() == Window.OK) {
                     Activator.refresh();
                 }

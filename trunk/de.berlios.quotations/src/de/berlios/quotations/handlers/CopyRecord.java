@@ -16,7 +16,6 @@ import de.berlios.quotations.util.Messages;
 
 public class CopyRecord extends AbstractHandlerWithState {
     public void handleStateChange(State state, Object oldValue) {
-        // TODO Automatycznie generowany szkielet metody
 
     }
 
@@ -29,11 +28,10 @@ public class CopyRecord extends AbstractHandlerWithState {
             Quotation quotation = (Quotation) mainViewSelection
                     .getFirstElement();
             if (quotation.getId() != null) {
-                quotation.setId(null);
                 QuotationEditWindow editWindow = new QuotationEditWindow(
                         HandlerUtil.getActiveShell(event), quotation, Activator
                                 .getDB(),
-                        Messages.getString("CopyRecordAction.WindowTitle")); //$NON-NLS-1$
+                        Messages.getString("CopyRecordAction.WindowTitle"), true); //$NON-NLS-1$
                 if (editWindow.open() == Window.OK) {
                     Activator.refresh();
                 }

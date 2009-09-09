@@ -41,12 +41,15 @@ public class QuotationEditWindow extends Dialog {
 
 	private String title;
 
+    private final boolean copyRecord;
+
 	public QuotationEditWindow(Shell parentShell, Quotation quotation,
-			QuotationDB quotationDB, String title) {
+            QuotationDB quotationDB, String title, boolean copyRecord) {
 		super(parentShell);
 		this.quotation = quotation;
 		this.quotationDB = quotationDB;
 		this.title = title;
+        this.copyRecord = copyRecord;
 	}
 
 	protected Control createContents(Composite parent) {
@@ -140,7 +143,8 @@ public class QuotationEditWindow extends Dialog {
 	}
 
 	protected void okPressed() {
-		if (quotation == null) {
+        System.out.println("okPressed");
+        if (quotation == null || copyRecord) {
 			quotation = new Quotation();
 		}
 		quotation.setAuthor(authorField.getText());
