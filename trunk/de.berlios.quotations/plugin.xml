@@ -5,7 +5,8 @@
    <extension
          id="application"
          point="org.eclipse.core.runtime.applications">
-      <application>
+      <application
+            icon="icon/book.png">
          <run
                class="de.berlios.quotations.application.Application">
          </run>
@@ -14,20 +15,23 @@
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            name="%QuotationsPerspective"
             class="de.berlios.quotations.ui.QuotationsPerspective"
-            id="de.berlios.quotations.ui.QuotationsPerspective">
+            icon="icon/book.png"
+            id="de.berlios.quotations.ui.QuotationsPerspective"
+            name="%QuotationsPerspective">
       </perspective>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <view
-            name="%MainView"
             class="de.berlios.quotations.ui.MainView"
-            id="de.berlios.quotations.ui.MainView">
+            icon="icon/document.png"
+            id="de.berlios.quotations.ui.MainView"
+            name="%MainView">
       </view>
       <view
             class="de.berlios.quotations.ui.DetailsView"
+            icon="icon/document.png"
             id="de.berlios.quotations.ui.DetailsView"
             name="%DetailsView"
             restorable="true">
