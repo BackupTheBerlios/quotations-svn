@@ -15,7 +15,8 @@ Bundle-ClassPath: quotations.jar,
  lib/hibernate3.jar,
  lib/jta.jar,
  lib/log4j-1.2.11.jar,
- lib/junit-4.1.jar
+ lib/junit-4.1.jar,
+ OSGI-INF/l10n/
 Require-Bundle: org.eclipse.ui;bundle-version="3.5.0",
  org.eclipse.core.runtime;bundle-version="3.5.0"
 Bundle-Activator: de.berlios.quotations.application.Activator
