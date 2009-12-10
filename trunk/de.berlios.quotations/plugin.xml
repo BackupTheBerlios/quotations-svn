@@ -125,6 +125,10 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu">
+            <menu
+               id="actionsMenu"
+               label="%Actions">
+            
          <command
                commandId="de.berlios.quotations.commands.Filter"
                label="%Filter"
@@ -155,6 +159,7 @@
                label="%ImportDB"
                style="push">
          </command>
+         </menu>
       </menuContribution>
    </extension>
    <extension
@@ -166,6 +171,10 @@
          <property
                name="appName"
                value="%Bundle-Name">
+         </property>
+         <property
+               name="windowImages"
+               value="icon/book.png">
          </property>
       </product>
    </extension>
