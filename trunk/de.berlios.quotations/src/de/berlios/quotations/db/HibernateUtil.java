@@ -5,19 +5,18 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.eclipse.core.runtime.Platform;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import de.berlios.quotations.util.Debug;
 
-
 public class HibernateUtil {
 
 	private static final SessionFactory sessionFactory;
 
-	private static String dbDirecotry = System.getProperty("user.home")
-			+ System.getProperty("file.separator") + ".quotations"
+	private static String dbDirecotry = Platform.getInstanceLocation().getURL().getFile()
 			+ System.getProperty("file.separator") + "db";
 
 	static {
@@ -32,13 +31,14 @@ public class HibernateUtil {
 			String show_sql = "false";
 			if (Debug.isEnabled("hibernate"))
 				show_sql = "true";
-			
+
 			Configuration cfg = new Configuration().configure().setProperty(
 					"hibernate.connection.url",
 					"jdbc:hsqldb:file:" + dbDirecotry
 							+ System.getProperty("file.separator")
-							+ "cytaty.db").setProperty("hibernate.show_sql", show_sql);
-			
+							+ "cytaty.db").setProperty("hibernate.show_sql",
+					show_sql);
+
 			sessionFactory = cfg.buildSessionFactory();
 
 		} catch (Throwable ex) {

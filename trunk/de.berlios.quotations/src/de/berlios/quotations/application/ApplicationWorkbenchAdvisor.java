@@ -5,9 +5,6 @@ import org.eclipse.ui.application.WorkbenchAdvisor;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 /**
- * {@inheritDoc}
- * 
- * @author THaratynowicz
  * 
  */
 public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {

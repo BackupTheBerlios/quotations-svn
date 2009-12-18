@@ -126,14 +126,9 @@
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu">
             <menu
-               id="actionsMenu"
-               label="%Actions">
+               id="editMenu"
+               label="%Edit">
             
-         <command
-               commandId="de.berlios.quotations.commands.Filter"
-               label="%Filter"
-               style="push">
-         </command>
          <command
                commandId="de.berlios.quotations.commands.AddRecord"
                label="%AddRecord"
@@ -154,12 +149,21 @@
                label="%DeleteRecord"
                style="push">
          </command>
-         <command
-               commandId="de.berlios.quotations.commands.ImportDB"
-               label="%ImportDB"
-               style="push">
-         </command>
          </menu>
+            <menu
+                  id="actionsMenu"
+                  label="%Actions">
+               <command
+                     commandId="de.berlios.quotations.commands.Filter"
+                     label="%Filter"
+                     style="push">
+               </command>
+               <command
+                     commandId="de.berlios.quotations.commands.ImportDB"
+                     label="%ImportDB"
+                     style="push">
+               </command>
+            </menu>
       </menuContribution>
    </extension>
    <extension
