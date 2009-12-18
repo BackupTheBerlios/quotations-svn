@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.eclipse.core.runtime.Platform;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
@@ -16,7 +15,8 @@ public class HibernateUtil {
 
 	private static final SessionFactory sessionFactory;
 
-	private static String dbDirecotry = Platform.getInstanceLocation().getURL().getFile()
+	private static String dbDirecotry = System.getProperty("user.home")
+			+ System.getProperty("file.separator") + ".quotations"
 			+ System.getProperty("file.separator") + "db";
 
 	static {
